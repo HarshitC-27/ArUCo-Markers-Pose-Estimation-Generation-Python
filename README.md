@@ -13,9 +13,9 @@ The file `generate_aruco_tags.py` contains the code for ArUCo Marker Generation.
 You need to specify the type of marker you want to generate.
 
 The command for running is :-  
-`python generate_aruco_tags.py --id 24 --type DICT_5X5_100 --output tags/`
+`python3 generate_aruco_tags.py --id 24 --type DICT_5X5_100 --output tags/`
 
-You can find more details on other parameters using `python generate_aruco_tags.py --help`
+You can find more details on other parameters using `python3 generate_aruco_tags.py --help`
 
 ## 2. ArUCo Marker Detection
 The files `detect_aruco_images.py` and `detect_aruco_video.py` contains the code for detecting
@@ -24,14 +24,14 @@ video file and the type of marker you want to detect.
 
 The command for running is :-  
 **For inference on images**   
-`python detect_aruco_images.py --image Images/test_image_1.png --type DICT_5X5_100`  
+`python3 detect_aruco_images.py --image Images/test_image_1.png --type DICT_5X5_100`  
 **For inference using webcam feed**  
-`python detect_aruco_video.py --type DICT_5X5_100 --camera True `  
+`python3 detect_aruco_video.py --type DICT_5X5_100 --camera True `  
 **For inference using video file**   
-`python detect_aruco_video.py --type DICT_5X5_100 --camera False --video test_video.mp4`  
+`python3 detect_aruco_video.py --type DICT_5X5_100 --camera False --video test_video.mp4`  
 
-You can find more details on other parameters using `python detect_aruco_images.py --help`
-and `python detect_aruco_video.py --help`
+You can find more details on other parameters using `python3 detect_aruco_images.py --help`
+and `python3 detect_aruco_video.py --help`
 
 ## 3. Calibration
 The file `calibration.py` contains the code necessary for calibrating your camera. This step 
@@ -44,9 +44,9 @@ Note that the calibration and distortion numpy files given in my repository is o
 and might not work well for yours.   
 
 The command for running is :-  
-`python calibration.py --dir calibration_checkerboard/ --square_size 0.024`
+`python3 calibration.py --dir calibration_checkerboard/ --square_size 0.024`
 
-You can find more details on other parameters using `python calibration.py --help`  
+You can find more details on other parameters using `python3 calibration.py --help`  
 
 ## 4. Pose Estimation  
 The file `pose_estimation.py` contains the code that performs pose estimation after detecting the 
@@ -56,10 +56,10 @@ as the type for ArUCo marker you want to detect. Note that this code could be ea
 pose estimation on images and video files.  
 
 The command for running is :-  
-`python pose_estimation.py --K_Matrix calibration_matrix.npy --D_Coeff distortion_coefficients.npy --type DICT_5X5_100`  
+`python3 pose_estimation.py --K_Matrix calibration_matrix.npy --D_Coeff distortion_coefficients.npy --type DICT_5X5_100`  
 
 
-You can find more details on other parameters using `python pose_estimation.py --help`  
+You can find more details on other parameters using `python3 pose_estimation.py --help`  
 
 ## Output
 
